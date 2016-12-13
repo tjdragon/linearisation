@@ -15,7 +15,7 @@ data class PricingNode(val id: String) {
 		child.parents.add(this)
 	}
 	
-	override fun toString(): String = id + " -> " + children.map { c -> c.id }
+	override fun toString(): String = id + "{" + calcIndex + "} -> " + children.map { c -> c.id }
 }
 
 class Graph {
@@ -24,6 +24,12 @@ class Graph {
 	fun addNode(n: PricingNode) {
 		nodes.add(n)
 	}
+	
+	fun addNodes(vararg nodes: PricingNode) {
+		nodes.forEach { p -> addNode(p) }
+	}
+	
+	override fun toString(): String = "G " + nodes.toString()
 }
 
 class CycleAlgo {
