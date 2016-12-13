@@ -1,1 +1,3 @@
 # linearisation
+
+Pricing Graph Linearisation
