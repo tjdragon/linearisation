@@ -23,7 +23,7 @@ class Test {
 		assertFalse(cycleAlgo.containsCycle(graph))
 		val pl1 = linAlgo.linearise(graph)
 		println("diamond " + pl1)
-		//assertTrue(pl1.size == 1)
+		assertTrue(pl1.size == 1)
 	}
 	
 	@test fun pl1() {
